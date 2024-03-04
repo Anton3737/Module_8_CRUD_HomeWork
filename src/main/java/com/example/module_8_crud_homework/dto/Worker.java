@@ -3,29 +3,20 @@ package com.example.module_8_crud_homework.dto;
 import java.util.Date;
 
 public class Worker {
+
     private int id;
     private String name;
-    private Date birthday;
+    private String birthday;
     private String level;
     private int salary;
 
-    private String type;
-
-
-
-    public Worker(int id, String name, Date birthday, String level, int salary) {
-        this.id = id;
+    public Worker(String name, String birthday, String level, int salary) {
         this.name = name;
-        this.birthday = birthday;
+        this.birthday = String.valueOf(birthday);
         this.level = level;
         this.salary = salary;
     }
 
-    public Worker(String name, Date birthday, String type) {
-        this.name = name;
-        this.birthday = birthday;
-        this.type = type;
-    }
 
     public int getId() {
         return id;
@@ -43,11 +34,11 @@ public class Worker {
         this.name = name;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -74,6 +65,6 @@ public class Worker {
                         ", name= " + name +
                         ", birthday= " + birthday +
                         ", level= " + level +
-                        ", salary=" + salary;
+                        ", salary=" + salary + "\n";
     }
 }
